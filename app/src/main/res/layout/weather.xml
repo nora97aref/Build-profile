@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/travel_logo"
+            />
+
+        <TextView
+            android:id="@+id/weather"
+            android:layout_width="213dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="240dp"
+            android:text="Weather you like:"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/mainGrid"
+        android:layout_width="394dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:alignmentMode="alignMargins"
+        android:columnCount="3"
+        android:columnOrderPreserved="false"
+        android:padding="14dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="152dp"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/cold"
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/cold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="152dp"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="0dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/spring"
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/spring" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="152dp"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/hot"
+                    android:layout_width="120dp"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/hot" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+    <RelativeLayout
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/btnNext2"
+            android:layout_width="272dp"
+            android:layout_height="34dp"
+            android:layout_marginLeft="67dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/button_rounded"
+            android:onClick="btnNext2"
+            android:text="Next"
+            android:textColor="#ffffff"
+            android:textSize="22sp"
+            tools:ignore="OnClick" />
+    </RelativeLayout>
+
+</LinearLayout>
